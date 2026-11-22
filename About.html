@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>About Page</title>
+
+	<style>
+
+		body{
+    		background-color: white;
+    		background-image: url("sky.jpg");
+    		background-size: cover;
+    		background-position: center;
+    		background-repeat: no-repeat;
+    		background-attachment: fixed;
+    		font-family: arial;
+		}
+		header{
+			color: white;
+			text-align: center;
+			margin-top: 100px;
+			padding: 100px;
+			background-color: black;
+			margin-top: 0px;
+			border: solid;
+			padding: 100px;
+		}
+		.links{
+			margin-left: 950px;
+			margin-top: 0px;
+		}
+		.about{
+			color: black;
+			font-size: 50px;
+			margin-top: -30px;
+		}
+		.dark-mode{
+			background-color: black;
+			color: white;
+			border-color: white;
+		}
+		body.dark-mode .about{
+    color: white;
+		}
+		body.dark-mode{
+		    background-color: black;
+		    background-image: url("night.jpg");
+		    background-size: cover;
+		    background-repeat: no-repeat;
+		    color: white;
+		}
+
+	</style>
+</head>
+
+<body>
+
+	<header>
+
+		<h1 class="h1">Welcome to Lesotho</h1>
+
+		<button onclick="myFunction()">Dark Mode</button>
+
+		<button><a href="index.html">Home</a></button>
+		<button><a href="About.html">About</a></button>
+		<button><a href="Services.html">Services</a></button>
+		<button><a href="Gallery.html">Gallery</a></button>
+		<button><a href="Contact.html">Contact</a></button>
+
+	
+
+	</header>
+
+	<h2><p class="about">About</p></h2>
+
+	<h1>About Lesotho</h1>
+    <h4><p>A small mountain kingdom with big landscapes, warm people and a living culture. Here is what makes it worth the journey.</p></h4>
+
+    <main>
+    	
+    	<section>
+			<h2>Who we are</h2>
+        	<h4><p>Discover Lesotho is a travel guide built to help visitors plan a trip to the Kingdom of Lesotho. <br>
+        	We bring together the places to see, the things to do and the practical details you need before you arrive. <br>
+        	Our goal is simple: make it easy to find honest, local information and to book the experiences that fit your trip.</p></h4>
+		</section>
+
+		<table border="4px" border-style="solid">
+			<tr>
+				<th>Tourist Attraction</th>
+				<th>Location</th>
+				<th>Activities Done</th>				
+			</tr>
+
+			<tr>
+				<td>Maletsunyane Water Falls</td>
+				<td>Semonkong</td>
+				<td>Pony Trekking, Gorge Hiking, Fly Fishing <br>
+				and Scenic Photography.</td>
+			</tr>
+
+			<tr>
+				<td>Thaba-Bosiu National Monument</td>
+				<td>Maseru</td>
+				<td>Cultural Village Tours, King Moshoeshoe's Historical <br>
+				mountain fortress, learning about Basotho Heritage.</td>
+			</tr>
+
+			<tr>
+				<td>Katse-Dam</td>
+				<td>Lesotho Highlands</td>
+				<td>Dam wall tours, alpine botanical garden walks and scenic <br>
+				boat?water views.</td>
+			</tr>
+
+			<tr>
+				<td>Ha Kome Caves Dwellings</td>
+				<td>Berea District</td>
+				<td>Guided cave village tours, learning about historical <br>
+				underground-built homes ,and viewing local rock paintings.</td>
+			</tr>
+
+			<tr>
+				<td>Ts'ehlanyane National Park</td>
+				<td>Northen Highlands Mountains</td>
+				<td>Nature walks, Wildlife/bird spotting, swimming in natural <br>
+				rock pools and Berg bamboo forest hiking.</td>
+			</tr>
+
+			<tr>
+				<td>Afriski Mountain Resort</td>
+				<td>Mahlasela Pass, Maluti Mountains</td>
+				<td>Skiing and snowboarding(seasonal June-August), mountain biking <br>
+				hiking, and the Wninterfest music fest.</td>
+			</tr>
+		</table>
+
+
+
+
+    </main>
+
+    <h2>Our mission</h2>
+      <p>We want travellers to experience Lesotho in a way that benefits the people who live here. We work with local guides, <br>
+       family-run lodges and community craft makers, so that tourism income stays in the community.</p>
+      <p>Questions about planning a trip? <a href="contact.html">Get in touch</a> and we will point you in the right direction.</p>
+
+<script>
+	
+	function myFunction() {
+		var element = document.body;
+		element.classList.toggle("dark-mode")
+	}
+
+</script>
+
+</body>
+<footer>Copyright@2026</footer>
+</html>

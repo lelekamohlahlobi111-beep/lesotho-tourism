@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Contact Page</title>
+	<style>
+		header{
+			color: white;
+			text-align: center;
+			padding: 100px;
+			background-color: black;
+			margin-top: 0px;
+			border: solid;
+		}
+		body{
+			background-color: white;
+			background-image: url("sky.jpg");
+			background-size: cover;
+			background-repeat: no-repeat;
+			color: black;
+			font-family: arial;
+		}
+		.dark-mode{
+			background-color: black;
+			color: white;
+			border-color: white;
+		}
+		body.dark-mode .contact{
+			color: white;
+		}
+		body.dark-mode{
+			background-color: black;
+			background-image: url("night.jpg");
+			background-size: cover;
+			background-repeat: no-repeat;
+			color: white;
+		}
+		.contact{
+			color: black;
+			font-size: 50px;
+			margin-top: -30px;
+		}
+		.form{
+			border: 4px solid black;
+			border-radius: 8px;
+			margin-right: 650px;
+			background-color: gray;
+		}
+		.cost{
+			border: 4px solid black;
+			margin-left: 650px;
+			margin-top: -350px;
+			border-radius: 8px;
+			background-color: gray;
+		}
+		.total{
+			font-size: 15px;
+			font-family: sans-serif;
+		}
+		.dark-mode .cost{
+			border-color: white;
+		}
+		.dark-mode .form{
+			border-color: white;
+		}
+
+		@media (max-width: 768px) {
+			header {
+				padding: 30px 10px;
+			}
+
+			.form, .cost {
+				margin: 10px;
+				padding: 10px;
+			}
+
+			input, select {
+				width: 100%;
+				box-sizing: border-box;
+			}
+
+			.cost table {
+				width: 100%; 
+			}
+		}
+	</style>
+</head>
+
+<body>
+
+	<header>
+		<h1 class="h1">Welcome to Lesotho</h1>
+
+		<button onclick="myFunction()">Dark Mode</button>
+
+		<button><a href="index.html">Home</a></button>
+		<button><a href="About.html">About</a></button>
+		<button><a href="Services.html">Services</a></button>
+		<button><a href="Gallery.html">Gallery</a></button>
+		<button><a href="Contact.html">Contact</a></button>
+	</header> <br>
+
+		<h2><p class="contact">Contact</p></h2>
+
+	<div class="form">
+		<form>
+
+			<label>Name</label> <br>
+			<input type="text"> <br> <br>
+
+			<label>Email</label> <br>
+			<input type="text" placeholder="you@gmail.com"> <br> <br>
+
+			<label>Subject</label> <br>
+			<input type="text"> <br> <br>
+
+			<label>Number of Guests</label> <br>
+			<input type="number" id="guests" value="1" min="1" max="20"> <br> <br>
+
+			<label>Place to visit</label> <br>
+			<select id="place">
+				<option value="" data-price="0">Choose a Place</option>
+				<option data-price="450">Maletsunyane Waterfalls (M450 per adult)</option>
+				<option data-price="300">Thaba-Bosiu National Monument (M300 per adult)</option>
+				<option data-price="400">Katse-Dam (M400 per adult)</option>
+				<option data-price="350">Ha Kome Caves Dwellings (M350 per adult)</option>
+				<option data-price="380">Ts'ehlanyane National Park (M380 per adult)</option>
+				<option data-price="900">Afriski Mountain Resort (M900 per adult)</option>
+			</select> <br> <br>
+
+			<label>Accomodation</label> <br>
+			<select id="stay">
+				<option value="" data-price="0">Choose accommodation...</option>
+				<option value="" data-price="0">None (day trip)</option>
+				<option data-price="150">Camping (M150 per person per night)</option>
+				<option data-price="450">Guesthouse (M450 per person per night)</option>
+				<option data-price="800">Mountain Lodge (M800 per person per night)</option>
+			</select>
+		</form>
+	</div> <br>
+
+	<div class="cost">
+		<h3>Your estimated cost</h3>
+		<table>
+			<tr><td>Entry fees</td><td class="amount" id="outEntry">M 0.00</td></tr>
+			<tr><td>Accommodation</td><td class="amount" id="outStay">M 0.00</td></tr>
+			<tr><td>Subtotal</td><td class="amount" id="outSub">M 0.00</td></tr>
+			<tr class="total"><td>Total</td><td class="amount" id="outTotal">M 0.00</td></tr>
+			<tr><td>Per person</td><td class="amount" id="outPer">M 0.00</td></tr>
+			<tr><td>Estimated Cost: </td><td class="total" id="outEstimated">M 0.00</td></tr>
+		</table>
+	</div>
+
+	<script>
+		function myFunction() {
+			document.body.classList.toggle("dark-mode");
+		}
+
+		function calculate() {
+			var guests = parseInt(document.getElementById("guests").value, 10);
+			if (isNaN(guests) || guests < 0) { guests = 0; }
+
+			var place = Number(document.getElementById("place").selectedOptions[0].dataset.price);
+			var stay = Number(document.getElementById("stay").selectedOptions[0].dataset.price);
+
+			var entry = guests * place;
+			var accom = guests * stay;
+			var total = entry + accom;
+			var per = guests > 0 ? total / guests : 0;
+
+			document.getElementById("outEntry").textContent = "M " + entry.toFixed(2);
+			document.getElementById("outStay").textContent = "M " + accom.toFixed(2);
+			document.getElementById("outSub").textContent = "M " + total.toFixed(2);
+			document.getElementById("outTotal").textContent = "M " + total.toFixed(2);
+			document.getElementById("outPer").textContent = "M " + per.toFixed(2);
+			document.getElementById("outEstimated").textContent = "M " + total.toFixed(2);
+		}
+
+		["guests", "place", "stay"].forEach(function (id) {
+			document.getElementById(id).addEventListener("input", calculate);
+			document.getElementById(id).addEventListener("change", calculate);
+		});
+
+		calculate();
+	</script>
+
+</body>
+</html>

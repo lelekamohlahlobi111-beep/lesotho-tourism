@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Services Page</title>
+
+	<style>
+
+		body{
+    		background-color: white;
+    		background-image: url("sky.jpg");
+    		background-size: cover;
+    		background-position: center;
+    		background-repeat: no-repeat;
+    		background-attachment: fixed;
+    		font-family: arial;
+		}
+		header{
+			color: white;
+			text-align: center;
+			margin-top: 100px;
+			padding: 100px;
+			background-color: black;
+			margin-top: 0px;
+			border: solid;
+			padding: 100px;
+		}
+		.links{
+			margin-left: 950px;
+			margin-top: 0px;
+		}
+		.services{
+			color: black;
+			font-size: 50px;
+			margin-top: -30px;
+		}
+		main{
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 10px;
+			border: 4px;
+			border-style: solid;
+		}
+		.dark-mode{
+			background-color: black;
+			color: white;
+			border-color: white;
+		}
+		body.dark-mode .sevices{
+    		color: white;
+		}
+		body.dark-mode{
+    		background-image: url("night.jpg");
+    		background-size: cover;
+    		background-position: center;
+    		background-repeat: no-repeat;
+    		background-attachment: fixed;
+		}
+
+	</style>
+</head>
+
+<body>
+
+	<header>
+
+		<h1 class="h1">Welcome to Lesotho</h1>
+
+		<button onclick="myFunction()">Dark Mode</button>
+
+		<button><a href="index.html">Home</a></button>
+		<button><a href="About.html">About</a></button>
+		<button><a href="Services.html">Services</a></button>
+		<button><a href="Gallery.html">Gallery</a></button>
+		<button><a href="Contact.html">Contact</a></button>
+
+	</header>
+
+	<h2><p class="services">Services</p></h2>
+
+
+	<main>
+	  <section>
+	    <div class="container">
+	    	<div class="row">
+
+	    		<article class="col-sm-6">
+			        <h2>Guided tours</h2>
+			        <p>Half-day and full-day tours of Maseru, Thaba Bosiu and the Maletsunyane Falls with a licensed local guide.</p>
+			        <p class="price">From M450 per person</p>
+			        <a href="contact.html">Book a tour</a>
+
+			    </article>
+
+			    <article class="col-sm-6">    	      
+			        <h2>Pony trekking</h2>
+			        <p>Ride the traditional Basotho pony through mountain villages and valleys. Options run from two hours to multi-day treks.</p>
+			        <p class="price">From M600 per person</p>
+			        <a href="contact.html">Book a trek</a>
+
+			    </article> 
+			    
+			    <article class="col-sm-6">    
+			      
+			        <h2>Hiking and adventure</h2>
+			        <p>Guided hikes, abseiling at Maletsunyane Falls and winter skiing at Afriski for those who want a challenge.</p>
+			        <p class="price">From M500 per person</p>
+			        <a href="contact.html">Plan an adventure</a>
+
+
+			    <article class="col-sm-6">  
+			        <h2>Accommodation</h2>
+			        <p>Mountain lodges, guesthouses and village homestays, all checked for comfort and run by local hosts.</p>
+			        <p class="price">From M350 per night</p>
+			        <a href="contact.html">Find a place to stay</a>
+
+			    </article>    
+
+			    <article class="col-sm-6">    
+			      
+			        <h2>Cultural experiences</h2>
+			        <p>Visit a village, learn traditional crafts, taste Basotho food and hear the history of the kingdom from the people who live it.</p>
+			        <p class="price">From M300 per person</p>
+			        <a href="contact.html">Book an experience</a>
+
+			    </article>
+			    
+			    <article class="col-sm-6">  
+			        <h2>Transport and trip planning</h2>
+			        <p>Airport pickups, 4x4 hire with a driver and custom itineraries, so you spend less time planning and more time exploring.</p>
+			        <p class="price">Quote on request</p>
+			        <a href="contact.html">Request a quote</a>
+
+			    </article>    
+
+			</div>            
+	    </div>
+	  </section>
+
+</body>
+<footer>Copyright@2026</footer>
+</html>

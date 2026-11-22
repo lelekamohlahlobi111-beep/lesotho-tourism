@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Gallery Page</title>
+
+	<style>
+
+		body{
+			background-color: white;
+			background-image: url("sky.jpg");
+		    background-size: cover;
+		    background-repeat: no-repeat;
+		    color: black;
+		    font-family: arial;
+		}
+		header{
+			color: white;
+			text-align: center;
+			margin-top: 100px;
+			padding: 100px;
+			background-color: black;
+			margin-top: 0px;
+			border: solid;
+			padding: 100px;
+		}
+		.links{
+			margin-left: 950px;
+			margin-top: 0px;
+		}
+		.gallery{
+			color: black;
+			font-size: 50px;
+			margin-top: -30px;
+		}
+		main{
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 10px;
+			padding: 10px;
+		}
+		main img{
+    		width: 100%;
+    		height: auto;
+    		object-fit: cover;
+    		display: block;
+		}
+		.meander{
+			border: solid;
+			border-color: black;
+		}
+		.moshoeshoe{
+			border: solid;
+			border-color: black;
+		}
+		.nature{
+			border: solid;
+			border-color: black;
+		}
+		.snow{
+			border: solid;
+			border-color: black;
+		}
+		.dark-mode{
+			background-color: black;
+			color: white;
+			border-color: white;
+		}
+		body.dark-mode .gallery{
+    		color: white;
+		}
+		body.dark-mode{
+		    background-color: black;
+		    background-image: url("night.jpg");
+		    background-size: cover;
+		    background-repeat: no-repeat;
+		    color: white;
+		}
+		body.dark-mode main img,
+		body.dark-mode .meander,
+		body.dark-mode .moshoeshoe,
+		body.dark-mode .nature,
+		body.dark-mode .snow{
+    		border-color: white;
+		}
+
+	</style>
+</head>
+
+<body>
+
+	<header>
+
+		<h1 class="h1">Welcome to Lesotho</h1>
+
+		<button onclick="myFunction()">Dark Mode</button>
+
+		<button><a href="index.html">Home</a></button>
+		<button><a href="About.html">About</a></button>
+		<button><a href="Services.html">Services</a></button>
+		<button><a href="Gallery.html">Gallery</a></button>
+		<button><a href="Contact.html">Contact</a></button>
+
+	</header>
+
+	<h2><p class="gallery">Gallery</p></h2>
+
+	<main>
+
+	<section>
+
+		<div class="meander">
+
+		<img src="meander.jpg" width="40%" height="40%">
+
+		<p>
+			This is part of one of the logest Rivers in <br>
+			Lesotho which is Katse Dam.
+		</p>
+
+		</div>
+
+	</section>
+
+	<section>
+
+		<div class="moshoeshoe">
+
+		<img src="moshoeshoe.jpg" width="40%" height="40%">
+
+		<p>
+			This is the statue of one of the Greatest King of Lesotho who is King Moshoeshoe I. <br>
+		</p>
+
+		</div>
+
+	</section>
+
+	<section>
+
+		<div class="nature">
+		
+		<img src="nature.jpg" width="40%" height="40%">
+
+		<p>
+			This is the photo of the beautiful mountains of Lesotho located, in the highlands. <br>
+		</p>
+
+		</div>
+
+	</section>
+
+	<section>
+
+		<div class="snow">
+		
+		<img src="snow.jpg" width="40%" height="40%">
+
+		<p>
+			This are the snowy mountains of Lesotho. <br>
+		</p>
+
+		</div>
+
+	</section>
+
+	</main>
+
+		
+
+
+<script>
+	
+	function myFunction() {
+		var element = document.body;
+		element.classList.toggle("dark-mode")
+	}
+
+</script>
+
+</body>
+<footer>Copyright@2026</footer>
+</html>
